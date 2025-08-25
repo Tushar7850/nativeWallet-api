@@ -6,10 +6,10 @@ import rateLimiter from "./middleware/rateLimiter.js";
 
 import transactionsRoute from "./routes/transactionsRoute.js";
 import job from "./config/cron.js";
-
+dotenv.config();
+console.log("NODE_ENV :", process.env.NODE_ENV);
 if (process.env.NODE_ENV === "production") job.start(); // Start the cron job
 
-dotenv.config();
 
 const app = express();
 app.use(cors());
