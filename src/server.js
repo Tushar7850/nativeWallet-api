@@ -22,8 +22,7 @@ const PORT = process.env.PORT || 5001;
 // middleware to handle JSON requests
 
 app.get('/api/health', (req, res) => {
-    res.status(200).json({ message: "API is running" });
-    
+  res.status(200).json({ message: "API is running" });
 })
 
 

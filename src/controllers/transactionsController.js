@@ -3,6 +3,7 @@ import { sql } from "../config/db.js";
 export async function getTransactionsByUserId(req, res) {
   try {
     const { userId } = req.params;
+    
     console.log("User ID received:", req.params.userId);
     const transactions =
       await sql`SELECT * FROM transaction WHERE user_id = ${userId} ORDER BY created_at DESC`;
